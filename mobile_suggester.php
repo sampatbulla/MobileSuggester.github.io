@@ -44,8 +44,8 @@
 	$main_camera = $front_camera = 2;		
 	?>
 	<div class ="main_filter">
-		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars("/myphp1.php");?>"  target="suggester">
-			
+		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
+<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>
 			<label name= "filter">		
 				<div name = "Search by name" >
 					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
@@ -258,6 +258,6 @@
 		</form>	
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="/myphp1.php"></iframe>
+	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
 </body>
 </html>
