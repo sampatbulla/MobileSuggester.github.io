@@ -108,15 +108,16 @@ body{
 .phonefinder ul li .content{
 	position:middle;
 	left:0; 
+	bottom: -100%;
 	width:100%;
 	font-size: 30%;
 	color:#fff;
 	opacity:0;
 }
 .phonefinder ul li:hover .content{
-	bottom:-100;
+	bottom:0;
 	transition-delay: .5s;
-	transition: .5s; 
+	transition: .1s; 
 	opacity: 1;
 }
 
