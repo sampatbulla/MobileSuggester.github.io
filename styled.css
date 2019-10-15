@@ -118,7 +118,8 @@ body{
 	bottom:0;
 	transition-delay: .5s;
 	transition: .1s; 
-	opacity: 1;
+	opacity: .51;
+
 }
 
 #content1{
