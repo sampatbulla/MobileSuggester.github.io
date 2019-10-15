@@ -114,11 +114,10 @@ body{
 	opacity:0;
 }
 .phonefinder ul li:hover .content{
-	bottom:0;
-	font-size: 100%;
+	bottom:-100;
 	transition-delay: .5s;
 	transition: .5s; 
-	opacity: .5;
+	opacity: 1;
 }
 
 #content1{
