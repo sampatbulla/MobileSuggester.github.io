@@ -33,8 +33,6 @@
 	  <a class="navbar-brand" href=""><h2>Mobile Suggester</h2></a>
 	  <h5>Unbox the best</h5>
 	</nav>
-	<h1>Mobile Suggester</h1>
-	<h5>Unbox the best</h5>
 
 	<?php
 	// define variables and set to empty values
