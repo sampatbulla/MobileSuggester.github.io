@@ -117,8 +117,8 @@ body{
 	bottom:0;
 	font-size: 100%;
 	transition-delay: .5s;
-	transition: .1s; 
-	opacity: .1;
+	transition: .5s; 
+	opacity: .5;
 }
 
 #content1{
