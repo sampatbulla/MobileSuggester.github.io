@@ -141,7 +141,7 @@ if ($result->num_rows > 0) {
         "<p>".
         "<img src='image/".$row["S_id"]."'><br>".
         "Name: " . $row["Smartphone Name"]."<br>".
-        "Release_year: ".$row["Year"]."<br>".
+        "Release year: ".$row["Year"]."<br>".
         "RAM: ".$row["Ram"]."<br>".
         "Internal Memory: ".$row["Storage"]."<br>".
         "Battery: ".$row["Battery"]."<br>".

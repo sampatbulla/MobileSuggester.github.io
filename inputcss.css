@@ -1,0 +1,12 @@
+.attribute::after{
+	
+	color: rgb(255,0,0);
+	/*float: left;*/
+	white-space: pre;
+	content: "  *"
+}
+.main-class-attribute::before{
+	color:red;
+	content:"* required";
+	white-space: pre;
+}
