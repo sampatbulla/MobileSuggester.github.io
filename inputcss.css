@@ -1,35 +1,30 @@
-.attribute::after{
+
+.attribute::after,.attribute2::after{
 	
 	color: rgb(255,0,0);
 	/*float: left;*/
 	white-space: pre;
 	content: "  *"
 }
-.attribute2::after{
-	
-	color: rgb(255,0,0);
-	/*float: left;*/
-	white-space: pre;
-	content: "  *"
-}
-.main-class-attribute::before{
+.main::before{
 	color:red;
 	content:"* required";
 	white-space: pre;
+	margin:auto;
 }
-.main-class-attribute{
+.main{
 	width: 1000px;
+	margin:auto;
 }
-.attribute2,input[text]{
+.attribute2{
 	
 	float:right;
 	
 }
-.attribute,input[text]{
-	
-	width: 500px;
-	text-align: right;
-	
+.attribute,.attribute2{
+	width: 400px;
+	text-align: left;
+	font-weight: bold;
 }
 input[type=submit] {
   background-color: #4CAF50;
@@ -38,12 +33,12 @@ input[type=submit] {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 550px ;
+  margin-left: 45% ;
 }
 input[type="file"] {
   padding: 12px 20px;
   cursor: pointer;
-  margin-left: 530px ;
+  margin-left: 40% ;
 }
 input[type=submit]:hover {
   background-color: #45a049;
