@@ -5,8 +5,46 @@
 	white-space: pre;
 	content: "  *"
 }
+.attribute2::after{
+	
+	color: rgb(255,0,0);
+	/*float: left;*/
+	white-space: pre;
+	content: "  *"
+}
 .main-class-attribute::before{
 	color:red;
 	content:"* required";
 	white-space: pre;
+}
+.main-class-attribute{
+	width: 1000px;
+}
+.attribute2,input[text]{
+	
+	float:right;
+	
+}
+.attribute,input[text]{
+	
+	width: 500px;
+	text-align: right;
+	
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 550px ;
+}
+input[type="file"] {
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-left: 530px ;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
 }
