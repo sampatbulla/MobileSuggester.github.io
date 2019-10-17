@@ -6,7 +6,7 @@
 	</style>
 	<title>Mobile Suggester : Find the Phone that suits your needs</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="maincss.css">
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -54,6 +54,9 @@ function test_input($data) {
 }
 	
 ?>
+<div class="w3-sidebar w3-collapse" id="sidenav" style="top:44px; display: none;">
+<div id="leftmenuinner" style="padding-top: 0px;">
+<div class="w3-light-grey" id="leftmenuinnerinner"> 
 <div class ="main_filter">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<label>
@@ -287,9 +290,10 @@ function test_input($data) {
  			 </div>	
 		</div> -->
 	</form>
-	
 </div>
-
+</div>
+</div>
+</div>
 <?php
 $servername = "localhost";
 $username = "root";
