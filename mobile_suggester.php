@@ -18,7 +18,7 @@
 	}
 	</script>
 	<style>
-		.error {color: #FF0000;}
+		.error {color: #FF0001;}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="maincss.css">
@@ -29,12 +29,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href=""><h2>Mobile Suggester</h2></a>
 	  <h5>Unbox the best</h5>
 	</nav>
-	<h1>Mobile Suggester</h1>
-	<h5>Unbox the best</h5>
+	
 
 	<?php
 	// define variables and set to empty values
@@ -45,14 +44,47 @@
 	$ui = $os = $no_rear = $connect = $screen_size = [];
 	$main_camera = $front_camera = 2;		
 	?>
+	<nav id="navbar-example2" class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Filter</a>
+	  <ul class="nav nav-pills">
+	    <li class="nav-item">
+	      <a class="nav-link" href="#Battery" >Battery</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#OperatingSystem">Operating System</a>
+	    </li>
+	    <li class="nav-item dropdown">
+	      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+	      <div class="dropdown-menu">
+	        <a class="dropdown-item" href="#userinterface">User Interface</a>
+	        <a class="dropdown-item" href="#screensize">Screen Size</a>
+	        <a class="dropdown-item" href="#camera">Camera</a>
+	     	<a class="dropdown-item" href="#connect">Connectivity & More</a>
+	      </div>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#"></a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#"></a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#"></a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#"></a>
+	    </li>
+	  </ul>
+	</nav>
+
 	<div class ="main_filter">
-		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars("/myphp1.php");?>"  target="suggester">
+		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars("http://localhost/project/MobileSuggester.github.io/myphp1.php");?>"  target="suggester">
 			
 			<label name= "filter">		
 				<div name = "Search by name" >
 					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
 				</div><br>
-			</label>
+			</label><br>
 			<label name= "filter">
 				<div name = "Price limit">
 					Rs.<input type="text"  onkeyup = "verify_and_search()" name="lower_price_limit" value="<?php echo $lower_bound;?>">
@@ -64,191 +96,191 @@
 			<div oninput="search()" >
 
 			<label name= "filter">		
-			<label name = "filter_heading">Battery</label>
+			<label name = "filter_heading" id="Battery">Battery</label>
 			<div name = "Battery">
 				
 				<label>
 					<input type="radio" name="battery_input"  value = 1500>1500 mAh & above 
-				</label>
+				</label><br>
 				<label>
 					<input type="radio" name="battery_input"  value = 2000>2000 mAh & above 
-				</label>
+				</label><br>
 				<label>
 					<input type="radio" name="battery_input"  value = 2500>2500 mAh & above 
-				</label>
+				</label><br>
 				<label>
 					<input type="radio" name="battery_input"  value = 3000>3000 mAh & above 
-				</label>
+				</label><br>
 				<label> 
 					<input type="radio" name="battery_input"  value = 3500>3500 mAh & above 
-				</label>
+				</label><br>
 				<label> 
 					<input type="radio" name="battery_input"  value = 4000>4000 mAh & above  
-				</label>
+				</label><br>
 
 			</div>
-			</label>
+			</label><br>
 			
 			<label name= "filter">		
-			<label name = "filter_heading">Operating System</label>
+			<label name = "filter_heading" id="OperatingSystem">Operating System</label>
 			<div name = "OS"> 
 				
 				<label>
 					<input type="checkbox" name="os_input[]" value = "android" >Android 
-				</label>
+				</label><br>
 				<label>
 					<input type="checkbox" name="os_input[]" value = "ios">IOS 
-				</label>
+				</label><br>
 				
 			</div>
-			</label>
+			</label><br>
 			
 			<label name= "filter">
-			<label name = "filter_heading">User Interface</label>
+			<label name = "filter_heading" id="userinterface">User Interface</label>
 			<div name = "User Interface"> 
 				
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "oneui">Oneui  
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "zui">Zui  
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "oxygen">Oxygen  
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "miui">Miui 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "samsung Experience">Samsung Experience  
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "emui">Emui 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "stock">Stock  
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "funtouch">Funtouch 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "color">Color 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "ios">IOS 
-				</label>
+				</label><br>
 				
 			</div>
-			</label>
+			</label><br>
 			
 			<label name= "filter">
-			<label name = "filter_heading">Screen Size</label>
+			<label name = "filter_heading" id="screensize">Screen Size</label>
 			<div name = "Screen Size"> 
 				
 				<input type="checkbox" name="screen_size_input[]" value = "4.5">4.5 inch - 5.0 inch 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="screen_size_input[]" value = "5.0">5.0 inch - 5.5 inch 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="screen_size_input[]" value = "5.5">5.5 inch - 6.0 inch 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="screen_size_input[]" value = "6.0">6.0 inch - 6.5 inch 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="screen_size_input[]" value = "6.5">6.5 inch & above 
-				</label>
+				</label><br>
 				
 			</div>
-			</label>
+			</label><br>
 
 			<label name= "filter">
-			<label name = "filter_heading">Camera</label>
+			<label name = "filter_heading" id="camera">Camera</label>
 			<div name = "No. of Rear Cameras"> 
 				
 				<label>
-				<label name = "filter_sub_heading">Number of Rear Cameras</label>
+				<label name = "filter_sub_heading">Number of Rear Cameras</label><br>
 				<input type="checkbox" name="no_rear_input[]" value = "1">Single camera 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="no_rear_input[]" value = "2">Dual Camera 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="no_rear_input[]" value = "3">Triple Cameras 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="no_rear_input[]" value = "4">Quad Cameras 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="no_rear_input[]" value = "5">Penta Cameras 
-				</label>
+				</label><br>
 				
 			</div>
 			<div name = "Main Camera">
-				<label name = "filter_sub_heading">Main Camera Resolution</label> 
+				<label name = "filter_sub_heading">Main Camera Resolution</label> <br>
 				
 				<label>
 				<input type="radio" name="main_camera_input" value = "4">4 MP & above  
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="main_camera_input" value = "8">8 MP & above  
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="main_camera_input" value = "12">12 MP & above  
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="main_camera_input" value = "16">16 MP & above 
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="main_camera_input" value = "20">20 MP & above 
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="main_camera_input" value = "48">48 MP 
-				</label>
+				</label><br>
 				
 			</div>
 			<div name = "Front Camera">
-				<label name = "filter_sub_heading">Front Camera Resolution</label> 
+				<label name = "filter_sub_heading">Front Camera Resolution</label><br> 
 		
 				<label>
 				<input type="radio" name="front_camera_input" value = "5">5 MP & above 
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="front_camera_input" value = "8">8 MP & above 
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="front_camera_input" value = "12">12 MP & above 
-				</label>
+				</label><br>
 				<label>
 				<input type="radio" name="front_camera_input" value = "16">16 MP & above 
-				</label>
+				</label><br>
 				
 			</div>
-			</label>
+			</label><br>
 
 			<label name= "filter">
-			<label name = "filter_heading">Connectivity & More</label>
+			<label name = "filter_heading" id="connect">Connectivity & More</label><br>
 			<div name = "Connectivity">
 
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "Wifi">Wifi 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "Bluetooth">Bluetooth 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "NFC">NFC 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "Fingerprint_scanner">Fingerprint Scanner 
-				</label>
+				</label><br>
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "Face_unlock">Face Unlock 
-				</label>
+				</label><br>
 
 			</div>
-			</label> 
+			</label> <br>
 			<select name="priority">
 	 			<option value="alpha">a-z</option>
 	  			<option value="lower">cost lower to higher</option>
@@ -260,6 +292,6 @@
 		</form>	
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="/myphp1.php"></iframe>
+	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="http://localhost/project/MobileSuggester.github.io/myphp1.php"></iframe>
 </body>
 </html>
