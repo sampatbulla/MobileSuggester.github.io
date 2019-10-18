@@ -78,7 +78,7 @@
 	</nav>
 
 	<div class ="main_filter">
-		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars("http://localhost/project/MobileSuggester.github.io/myphp1.php");?>"  target="suggester">
+		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars("http://localhost/project/MOBILE_SUGGESTER_DATABASE/myphp1.php");?>"  target="suggester">
 			
 			<label name= "filter">		
 				<div name = "Search by name" >
@@ -291,7 +291,8 @@
 		</div>
 		</form>	
 	</div>
-
-	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="http://localhost/project/MobileSuggester.github.io/myphp1.php"></iframe>
+	<div class="main_filter1">
+	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="http://localhost/project/MOBILE_SUGGESTER_DATABASE/myphp1.php"></iframe>
+	</div>
 </body>
 </html>
