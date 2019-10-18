@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `CAMERA`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `CAMERA` (
-  `S_id` int(11) NOT NULL,
+  `S_id` int(11) AUTO_INCREMENT NOT NULL,
   `No_of_cameras` int(11) DEFAULT NULL,
   `Rear_primary_camera` int(11) DEFAULT NULL,
   `Front_camera` int(11) DEFAULT NULL,
@@ -50,12 +50,13 @@ DROP TABLE IF EXISTS `CONNECTIVITY`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `CONNECTIVITY` (
-  `Cn_id` int(11) NOT NULL,
+  `Cn_id` int(11) AUTO_INCREMENT NOT NULL,
   `Wifi` int(11) DEFAULT NULL,
   `Bluetooth` int(11) DEFAULT NULL,
   `NFC` int(11) DEFAULT NULL,
   `Fingerprint_scanner` int(11) DEFAULT NULL,
   `Face_unlock` int(11) DEFAULT NULL,
+  UNIQUE KEY (Wifi,Bluetooth,NFC,Fingerprint_scanner,Face_unlock),
   PRIMARY KEY (`Cn_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -78,9 +79,10 @@ DROP TABLE IF EXISTS `DISPLAY`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `DISPLAY` (
-  `Disp_id` int(11) NOT NULL,
+  `Disp_id` int(11) AUTO_INCREMENT NOT NULL,
   `Size` decimal(2,1) DEFAULT NULL,
   `Type_of_Display` varchar(6) CHARACTER SET utf8 DEFAULT NULL,
+  UNIQUE KEY (Size,Type_of_Display),
   PRIMARY KEY (`Disp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -103,9 +105,10 @@ DROP TABLE IF EXISTS `PROCESSORS`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `PROCESSORS` (
-  `Processors_id` int(11) NOT NULL,
-  `P_name` varchar(4) CHARACTER SET utf8 DEFAULT NULL,
+  `Processors_id` int(11) AUTO_INCREMENT NOT NULL,
+  `P_name` varchar(6) CHARACTER SET utf8 DEFAULT NULL,
   `P_brand` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  UNIQUE KEY (P_name,P_brand),
   PRIMARY KEY (`Processors_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -116,7 +119,7 @@ CREATE TABLE `PROCESSORS` (
 
 LOCK TABLES `PROCESSORS` WRITE;
 /*!40000 ALTER TABLE `PROCESSORS` DISABLE KEYS */;
-INSERT INTO `PROCESSORS` VALUES (1,'835','Snapdragon'),(2,'845','Snapdragon'),(3,'855','Snapdragon'),(4,'855+','Snapdragon'),(5,'712','Snapdragon'),(6,'710','Snapdragon'),(7,'660','Snapdragon'),(8,'636','Snapdragon'),(9,'675','Snapdragon'),(10,'632','Snapdragon'),(11,'665','Snapdragon'),(12,'430','Snapdragon'),(13,'439','Snapdragon'),(14,'625','Snapdragon'),(15,'730','Snapdragon'),(16,'670','Snapdragon'),(17,'730G','Snapdragon'),(18,'850','Snapdragon'),(19,'9825','Exynos'),(20,'9820','Exynos'),(21,'9810','Exynos'),(22,'8895','Exynos'),(23,'8890','Exynos'),(24,'9611','Exynos'),(25,'9610','Exynos'),(26,'9609','Exynos'),(27,'7885','Exynos'),(28,'7904','Exynos'),(29,'7872','Exynos'),(30,'7420','Exynos'),(31,'7880','Exynos'),(32,'7870','Exynos'),(33,'5433','Exynos'),(34,'7580','Exynos'),(35,'7570','Exynos'),(36,'g90t','Mediatek'),(37,'g90t','Mediatek'),(38,'p90','Mediatek'),(39,'x30','Mediatek'),(40,'p65','Mediatek'),(41,'p70','Mediatek'),(42,'p60','Mediatek'),(43,'p22','Mediatek'),(44,'p25','Mediatek'),(45,'p20','Mediatek'),(46,'a22','Mediatek'),(47,'x23','Mediatek'),(48,'x25','Mediatek'),(49,'p10','Mediatek'),(50,'a11','Apple'),(51,'a12','Apple'),(52,'a13','Apple'),(53,'a10','Apple'),(54,'a9','Apple'),(55,'a8','Apple');
+INSERT INTO `PROCESSORS` VALUES (1,'835','Snapdragon'),(2,'845','Snapdragon'),(3,'855','Snapdragon'),(4,'855+','Snapdragon'),(5,'712','Snapdragon'),(6,'710','Snapdragon'),(7,'660','Snapdragon'),(8,'636','Snapdragon'),(9,'675','Snapdragon'),(10,'632','Snapdragon'),(11,'665','Snapdragon'),(12,'430','Snapdragon'),(13,'439','Snapdragon'),(14,'625','Snapdragon'),(15,'730','Snapdragon'),(16,'670','Snapdragon'),(17,'730G','Snapdragon'),(18,'850','Snapdragon'),(19,'9825','Exynos'),(20,'9820','Exynos'),(21,'9810','Exynos'),(22,'8895','Exynos'),(23,'8890','Exynos'),(24,'9611','Exynos'),(25,'9610','Exynos'),(26,'9609','Exynos'),(27,'7885','Exynos'),(28,'7904','Exynos'),(29,'7872','Exynos'),(30,'7420','Exynos'),(31,'7880','Exynos'),(32,'7870','Exynos'),(33,'5433','Exynos'),(34,'7580','Exynos'),(35,'7570','Exynos'),(36,'g90t','Mediatek'),(37,'g90tx','Mediatek'),(38,'p90','Mediatek'),(39,'x30','Mediatek'),(40,'p65','Mediatek'),(41,'p70','Mediatek'),(42,'p60','Mediatek'),(43,'p22','Mediatek'),(44,'p25','Mediatek'),(45,'p20','Mediatek'),(46,'a22','Mediatek'),(47,'x23','Mediatek'),(48,'x25','Mediatek'),(49,'p10','Mediatek'),(50,'a11','Apple'),(51,'a12','Apple'),(52,'a13','Apple'),(53,'a10','Apple'),(54,'a9','Apple'),(55,'a8','Apple');
 /*!40000 ALTER TABLE `PROCESSORS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,7 +131,7 @@ DROP TABLE IF EXISTS `SMARTPHONE`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `SMARTPHONE` (
-  `S_id` int(11) NOT NULL,
+  `S_id` int(11) AUTO_INCREMENT NOT NULL,
   `Smartphone_name` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `Price` int(11) DEFAULT NULL,
   `Ram` int(11) DEFAULT NULL,
@@ -139,6 +142,7 @@ CREATE TABLE `SMARTPHONE` (
   `Soft_id` int(11) DEFAULT NULL,
   `Cn_id` int(11) DEFAULT NULL,
   `Disp_id` int(11) DEFAULT NULL,
+  UNIQUE KEY (Smartphone_name,Price,Ram,Storage,Release_year,Battery,Processor_id,Soft_id,Cn_id,Disp_id),
   PRIMARY KEY (`S_id`),
   KEY `Soft_id` (`Soft_id`),
   KEY `Cn_id` (`Cn_id`),
@@ -169,7 +173,7 @@ DROP TABLE IF EXISTS `SOFTWARE`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `SOFTWARE` (
-  `Soft_id` int(11) NOT NULL,
+  `Soft_id` int(11) AUTO_INCREMENT NOT NULL,
   `Ui` varchar(18) CHARACTER SET utf8 DEFAULT NULL,
   `Os` varchar(7) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`Soft_id`)
