@@ -21,7 +21,7 @@
 		.error {color: #FF0000;}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="maincss.css">
 	<title>Mobile Suggester : Find the Phone that suits your needs</title>
 </head>
 <body>
